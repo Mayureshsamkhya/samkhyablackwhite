@@ -5,16 +5,16 @@ import { CheckCircle2, AlertTriangle, Zap, Building2 } from "lucide-react";
 
 export default function CvcTab() {
     return (
-        <div className="w-full h-[500px] flex bg-white rounded-xl overflow-hidden border border-gray-200 relative text-gray-900">
+        <div className="w-full min-h-[600px] md:min-h-[500px] flex flex-col md:flex-row bg-white rounded-xl overflow-hidden border border-gray-200 relative text-gray-900">
             {/* Background Grid */}
             <div className="absolute inset-0 opacity-40 pointer-events-none bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
             {/* Center Focus: The Strategic Bridge */}
-            <div className="flex-1 relative p-8 flex flex-col items-center justify-center">
-                <div className="flex items-center justify-center gap-12 w-full max-w-2xl relative">
+            <div className="flex-1 relative p-6 md:p-8 flex flex-col items-center justify-center">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 w-full max-w-2xl relative">
 
-                    {/* Connection Line */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-[3px] bg-gray-200 z-0 rounded-full overflow-hidden">
+                    {/* Connection Line - Desktop (Horizontal) */}
+                    <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-[3px] bg-gray-200 z-0 rounded-full overflow-hidden">
                         <motion.div
                             className="absolute inset-0 bg-emerald-700"
                             initial={{ width: "0%" }}
@@ -22,19 +22,31 @@ export default function CvcTab() {
                             transition={{ duration: 1.5, ease: "easeInOut" }}
                         />
                     </div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white border border-emerald-600 px-3 py-1 rounded-full z-10 shadow-sm">
+
+                    {/* Connection Line - Mobile (Vertical) */}
+                    <div className="md:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[3px] h-32 bg-gray-200 z-0 rounded-full overflow-hidden">
+                        <motion.div
+                            className="absolute inset-0 bg-emerald-700"
+                            initial={{ height: "0%" }}
+                            animate={{ height: "100%" }}
+                            transition={{ duration: 1.5, ease: "easeInOut" }}
+                        />
+                    </div>
+
+                    {/* Badge */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white border border-emerald-600 px-3 py-1 rounded-full z-10 shadow-sm whitespace-nowrap">
                         <span className="text-xs font-bold text-emerald-700 tracking-wide">STRATEGIC FIT: 92%</span>
                     </div>
 
                     {/* Left Card: Startup */}
                     <motion.div
-                        initial={{ x: -20, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="relative z-10 bg-white border border-gray-200 p-5 rounded-lg w-64 shadow-lg"
+                        className="relative z-10 bg-white border border-gray-200 p-5 rounded-lg w-full md:w-64 shadow-lg"
                     >
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 rounded bg-blue-50 flex items-center justify-center border border-blue-100">
+                            <div className="w-10 h-10 rounded bg-blue-50 flex items-center justify-center border border-blue-100 shrink-0">
                                 <Zap className="w-5 h-5 text-blue-600" />
                             </div>
                             <div>
@@ -55,13 +67,13 @@ export default function CvcTab() {
 
                     {/* Right Card: Corporate Strategy */}
                     <motion.div
-                        initial={{ x: 20, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.4 }}
-                        className="relative z-10 bg-white border border-gray-200 p-5 rounded-lg w-64 shadow-lg"
+                        className="relative z-10 bg-white border border-gray-200 p-5 rounded-lg w-full md:w-64 shadow-lg"
                     >
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 rounded bg-emerald-50 flex items-center justify-center border border-emerald-100">
+                            <div className="w-10 h-10 rounded bg-emerald-50 flex items-center justify-center border border-emerald-100 shrink-0">
                                 <Building2 className="w-5 h-5 text-emerald-600" />
                             </div>
                             <div>
@@ -86,16 +98,18 @@ export default function CvcTab() {
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 1 }}
-                    className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-red-50 border border-red-100 text-red-800 px-4 py-2.5 rounded-md flex items-center gap-3 text-xs w-auto max-w-md shadow-sm"
+                    className="relative md:absolute mt-6 md:mt-0 md:bottom-6 left-auto md:left-1/2 md:-translate-x-1/2 bg-red-50 border border-red-100 text-red-800 px-4 py-2.5 rounded-md flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-3 text-xs w-full md:w-auto max-w-md shadow-sm"
                 >
-                    <AlertTriangle className="w-4 h-4 text-red-600" />
-                    <span className="font-medium">Potential Conflict Detected: Competitor invested in Series A.</span>
-                    <span className="text-red-700 font-bold cursor-pointer hover:underline ml-2">Reviewing...</span>
+                    <div className="flex items-center gap-2 w-full md:w-auto">
+                        <AlertTriangle className="w-4 h-4 text-red-600 shrink-0" />
+                        <span className="font-medium">Potential Conflict Detected: Competitor invested in Series A.</span>
+                    </div>
+                    <span className="text-red-700 font-bold cursor-pointer hover:underline ml-6 md:ml-0">Reviewing...</span>
                 </motion.div>
             </div>
 
             {/* Right Sidebar: Compliance Engine */}
-            <div className="w-80 bg-gray-50 border-l border-gray-200 p-6 flex flex-col">
+            <div className="w-full md:w-80 bg-gray-50 border-t md:border-t-0 md:border-l border-gray-200 p-6 flex flex-col">
                 <h3 className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-2">
                     <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
                     Compliance Audit Log

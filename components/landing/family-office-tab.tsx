@@ -5,12 +5,12 @@ import { AlertCircle, ArrowRight, ShieldAlert, Ban } from "lucide-react";
 
 export default function FamilyOfficeTab() {
     return (
-        <div className="w-full h-[500px] flex bg-white rounded-xl overflow-hidden border border-gray-200 relative font-sans">
+        <div className="w-full min-h-[600px] md:min-h-[500px] flex flex-col md:flex-row bg-white rounded-xl overflow-hidden border border-gray-200 relative font-sans">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#000_1px,transparent_1px)] bg-[size:20px_20px]"></div>
 
             {/* Main Content Area */}
-            <div className="flex-1 p-10 flex flex-col items-center justify-center relative">
+            <div className="flex-1 p-6 md:p-10 flex flex-col items-center justify-center relative">
 
                 {/* The Truth Card */}
                 <div className="w-full max-w-md bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden relative z-10">
@@ -39,7 +39,7 @@ export default function FamilyOfficeTab() {
                                 </div>
 
                                 {/* Divergence Signal */}
-                                <motion.div
+                                {/* <motion.div
                                     initial={{ opacity: 0, x: -10 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.5 }}
@@ -49,7 +49,7 @@ export default function FamilyOfficeTab() {
                                         <Ban className="w-3 h-3" />
                                         Divergence Detected
                                     </div>
-                                </motion.div>
+                                </motion.div> */}
                             </div>
                         </div>
 
@@ -75,7 +75,7 @@ export default function FamilyOfficeTab() {
             </div>
 
             {/* Right Sidebar: Confidence Gauge */}
-            <div className="w-80 bg-gray-50 border-l border-gray-200 p-8 flex flex-col items-center justify-center relative overflow-hidden">
+            <div className="w-full md:w-80 bg-gray-50 border-t md:border-t-0 md:border-l border-gray-200 p-8 flex flex-col items-center justify-center relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-500 via-amber-500 to-green-500 opacity-20"></div>
 
                 <div className="relative w-48 h-48 mb-6">

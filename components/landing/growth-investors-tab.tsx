@@ -8,10 +8,10 @@ export default function GrowthInvestorsTab() {
     const [isHovering, setIsHovering] = useState(false);
 
     return (
-        <div className="w-full h-[500px] flex bg-gray-50 rounded-xl overflow-hidden border border-gray-200 relative">
-            {/* Scanner Beam */}
+        <div className="w-full min-h-[500px] flex flex-col md:flex-row bg-gray-50 rounded-xl overflow-hidden border border-gray-200 relative">
+            {/* Scanner Beam - Hidden on mobile for cleaner look */}
             <motion.div
-                className="absolute top-0 bottom-0 w-[2px] bg-blue-400 z-20 shadow-[0_0_20px_2px_rgba(96,165,250,0.8)]"
+                className="hidden md:block absolute top-0 bottom-0 w-[2px] bg-blue-400 z-20 shadow-[0_0_20px_2px_rgba(96,165,250,0.8)]"
                 animate={{
                     left: ["0%", "100%"],
                 }}
@@ -23,7 +23,7 @@ export default function GrowthInvestorsTab() {
             />
 
             {/* Left Side: The Input (Messy) */}
-            <div className="w-1/2 bg-[#f0f2f5] relative p-8 flex items-center justify-center overflow-hidden">
+            <div className="w-full md:w-1/2 h-[300px] md:h-auto bg-[#f0f2f5] relative p-8 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-gray-200">
                 <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_30%_20%,_#000000_1px,_transparent_1px)] bg-[length:4px_4px]"></div>
 
                 {/* Messy Stack */}
@@ -90,7 +90,7 @@ export default function GrowthInvestorsTab() {
             </div>
 
             {/* Right Side: The Output (Clean) */}
-            <div className="w-1/2 bg-white relative p-8 flex flex-col justify-center">
+            <div className="w-full md:w-1/2 h-auto bg-white relative p-6 md:p-8 flex flex-col justify-center">
                 <div className="bg-white rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden max-w-sm mx-auto w-full">
                     {/* Header */}
                     <div className="bg-gray-50 px-4 py-3 border-b border-gray-100 flex justify-between items-center">
