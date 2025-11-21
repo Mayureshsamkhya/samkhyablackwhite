@@ -36,7 +36,7 @@ export function FooterSection() {
             </div>
 
             {/* Main Footer Content */}
-            <div className="mx-auto max-w-7xl px-6 py-24 text-center">
+            <div className="mx-auto max-w-7xl px-6 py-14 text-center">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +45,8 @@ export function FooterSection() {
                 >
                     Stop Trading on
                     <br />
-                    <span className="text-gray-600">Yesterday's Data.</span>
+                    <span className="text-gray-900">Yesterday's Data.</span>
+                    {/* <span className="text-gray-600">Yesterday's Data.</span> */}
                 </motion.h2>
 
                 <motion.div
