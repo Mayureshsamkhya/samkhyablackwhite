@@ -60,7 +60,7 @@ export function Hero() {
                         </button>
                         <a
                             href="#"
-                            className="group relative flex items-center justify-center px-6 py-3 md:py-4 font- text-sm font-medium text-gray-600 transition-colors hover:text-obsidian"
+                            className="group relative flex items-center justify-center px-6 py-3 md:py-4 font- text-sm font-medium border border-gray-300 shadow-md text-gray-600 transition-colors hover:text-obsidian"
                         >
                             <span>See the Case Study</span>
                             <span className="absolute bottom-2 md:bottom-3 left-6 h-px w-[calc(100%-3rem)] scale-x-0 bg-obsidian transition-transform duration-300 group-hover:scale-x-100" />
