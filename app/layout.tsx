@@ -39,8 +39,8 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <Navbar/>
@@ -50,3 +50,11 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+//  <ThemeProvider
+//           attribute="class"
+//           defaultTheme="system"
+//           enableSystem
+//           disableTransitionOnChange
+//         ></ThemeProvider>
