@@ -251,7 +251,7 @@ export default function SignalVisual() {
                 <directionalLight position={[5, 5, 5]} intensity={2} />
                 <Particles />
                 <EffectComposer>
-                    <N8AO intensity={2} radius={2} distanceFalloff={2} />
+                    <N8AO intensity={2} aoRadius={2} distanceFalloff={2} />
                 </EffectComposer>
             </Canvas>
         </div>
