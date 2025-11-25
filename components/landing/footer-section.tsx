@@ -11,7 +11,7 @@ export function FooterSection() {
                 <div className="mx-auto max-w-7xl px-6 py-16 flex flex-col items-center justify-center text-center gap-8">
                     <div className="flex flex-col items-center justify-center gap-4 max-w-3xl">
                         <div className="p-3 bg-gray-100 rounded-full">
-                            <ShieldCheck  className="h-10 w-10 text-green-500" />
+                            <ShieldCheck  className="h-10 w-10 text-gray-900" />
                             {/* <Shield className="h-6 w-6 text-obsidian" /> */}
                         </div>
 
