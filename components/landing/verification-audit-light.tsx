@@ -177,7 +177,7 @@ export const VerificationAudit_Light = () => {
                     <h2 className="text-3xl md:text-5xl font-bold font- text-black mb-6 tracking-tight">Pretty stories vs. 
                         {/* <span className="ms-2 text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-600"> */}
                         {/* <span className="ms-2 text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-600"> */}
-                            Brutal truth.
+                          {" "}  Brutal truth.
                         {/* </span> */}
                         </h2>
                     <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font- ">
@@ -185,13 +185,13 @@ export const VerificationAudit_Light = () => {
                     </p>
                 </div>
 
-                <div className="relative max-w-4xl mx-auto" ref={containerRef}>
+                <div className="relative max-w-4xl mx-auto mb-3" ref={containerRef}>
                     {/* Paper/Document Container */}
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="relative bg-white text-gray-900 p-6 md:p-12 lg:p-20 rounded-sm shadow-xl border border-gray-100 font- min-h-[500px]"
+                        className="relative bg-white text-gray-900 p-6 md:p-12 lg:p-20 rounded-sm shadow-md border border-gray-100 font- min-h-[500px]"
                     >
                         {/* Document Header */}
                         <div className="flex justify-between items-end border-b-2 border-gray-900 mb-12 pb-4">

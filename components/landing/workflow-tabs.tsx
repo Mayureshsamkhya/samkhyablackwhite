@@ -50,7 +50,7 @@ export default function WorkflowTabs() {
     if (!activeContent) return null;
 
     return (
-        <section className="w-full bg-white py-24 px-6 transition-colors duration-300">
+        <section className="w-full bg-white py-12 px-6 transition-colors duration-300">
             <div className="w-full max-w-6xl mx-auto">
                 {/* Section Header */}
                 <div className="mb-12 text-center">

@@ -6,7 +6,7 @@ import { ArrowRight, FileText, CheckCircle2, TrendingUp, AlertCircle } from "luc
 
 export function Hero() {
     return (
-        <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white  transition-colors duration-300 ">
+        <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden bg-white  transition-colors duration-300 ">
             {/* Grid Background */}
             <div className="absolute inset-0 z-0 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white,transparent)] " />
 
@@ -31,7 +31,7 @@ export function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                         // className="font- text-4xl font-medium leading-[1.1] tracking-tight text-obsidian sm:text-5xl md:text-6xl mb-4 md:mb-6 font-text-4xl"
-                        className="font- text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[1.1] mb-6 text-balance text-[#0A0A0A] dark:text-white"
+                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[1.1] mb-6 text-balance text-[#0A0A0A] dark:text-white"
                     >
                         Invest with Conviction.
                         <br />

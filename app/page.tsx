@@ -75,11 +75,12 @@ export default function Home() {
       {/* <Navbar /> */}
       <Hero />
       <SocialProof />
+       <WorkflowTabs />
       <FeatureCardsSection />
       <ProductVisualization />
       {/* <CategoryClaim /> */}
       <VerificationAudit_Light />
-      <WorkflowTabs />
+      {/* <WorkflowTabs /> */}
       <FooterSection />
     </main>
 

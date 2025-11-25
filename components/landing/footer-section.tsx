@@ -5,35 +5,33 @@ import { Shield, ArrowRight } from "lucide-react";
 
 export function FooterSection() {
     return (
-        <footer className="w-full bg-white  text-obsidian  transition-colors duration-300 border-t border-gray-200 ">
+        <footer className="w-full   text-obsidian  transition-colors duration-300  border-gray-200 ">
             {/* Security Section */}
-            <div className="border-b border-gray-200 ">
-                <div className="mx-auto max-w-7xl px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
-                    <div className="flex items-center gap-4">
-                        <div className="p-3 bg-gray-100  rounded-full">
-                            <Shield className="h-6 w-6 text-obsidian " />
+            <div className=" border-gray-200">
+                <div className="mx-auto max-w-7xl px-6 py-16 flex flex-col items-center justify-center text-center gap-8">
+                    <div className="flex flex-col items-center justify-center gap-4 max-w-3xl">
+                        <div className="p-3 bg-gray-100 rounded-full">
+                            <Shield className="h-6 w-6 text-obsidian" />
                         </div>
-                        <div>
-                            <h3 className="font- text-xl font-medium text-black">
-                                Your Data is Your Edge.
-                            </h3>
-                            <p className="font- text-sm text-gray-600 mt-1">
-                                Enterprise-grade security. SOC2 Type II Certified.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="flex gap-3">
-                        {["SOC2", "GDPR", "Single-Tenant"].map((badge) => (
-                            <span
-                                key={badge}
-                                className="px-3 py-1 rounded-full border border-gray-200  text-xs font- font-medium tracking-wide text-gray-600 "
-                            >
-                                {badge}
-                            </span>
-                        ))}
+
+                        <h2 className="text-3xl md:text-5xl font-bold font- text-black mb-6 tracking-tight">
+                            Your Data is Your Edge. <br />We Keep it That Way.
+                        </h2>
+
+                        <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font- ">
+                            We deploy isolated instances for every firm. Your proprietary data and investment memos
+                            are never used to train our public models.
+                        </p>
+
+                        <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
+                            <li>Single-Tenant Architecture available.</li>
+                            <li>Role-Based Access Control (RBAC).</li>
+                            <li>Ephemeral Data Processing.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+
 
             {/* Main Footer Content */}
             <div className="mx-auto max-w-7xl px-6 py-14 text-center">
@@ -41,14 +39,16 @@ export function FooterSection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="font- text-4xl md:text-4xl lg:text-5xl font-medium mb-8 tracking-tight"
+                    className="text-3xl md:text-5xl font-bold font- text-black mb-6 tracking-tight"
                 >
-                    Stop Trading on
+                    Days of work.
                     <br />
-                    <span className="text-gray-900">Yesterday's Data.</span>
+                    <span className="text-gray-900">Done in Minutes.</span>
                     {/* <span className="text-gray-600">Yesterday's Data.</span> */}
                 </motion.h2>
-
+                <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font- ">
+                    Join the design partners building the future of Indian investment intelligence.
+                </p>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
