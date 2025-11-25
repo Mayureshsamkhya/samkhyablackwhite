@@ -1,33 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, ArrowRight } from "lucide-react";
+import { Shield, ArrowRight, Server, Users, Clock, ShieldCheck } from "lucide-react";
 
 export function FooterSection() {
     return (
-        <footer className="w-full   text-obsidian  transition-colors duration-300  border-gray-200 ">
+        <footer className="w-full md:mt-10  text-obsidian  transition-colors duration-300  border-gray-200 ">
             {/* Security Section */}
             <div className=" border-gray-200">
                 <div className="mx-auto max-w-7xl px-6 py-16 flex flex-col items-center justify-center text-center gap-8">
                     <div className="flex flex-col items-center justify-center gap-4 max-w-3xl">
                         <div className="p-3 bg-gray-100 rounded-full">
-                            <Shield className="h-6 w-6 text-obsidian" />
+                            <ShieldCheck  className="h-10 w-10 text-green-500" />
+                            {/* <Shield className="h-6 w-6 text-obsidian" /> */}
                         </div>
 
-                        <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-[1.1] mb-6 text-balance text-[#0A0A0A] dark:text-white">
-                            Your Data is Your Edge. <br />We Keep it That Way.
+                        <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-balance text-[#0A0A0A] dark:text-white">
+                            Enterprise-grade security by default
                         </h2>
-
-                        <p className="text-xl text-[#666666] dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10">
-                            We deploy isolated instances for every firm. Your proprietary data and investment memos
-                            are never used to train our public models.
+                        <p className="text-xl text-[#666666] dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                            Built on a foundation of zero-trust architecture and rigorous compliance standards.
                         </p>
-
-                        <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
-                            <li>Single-Tenant Architecture available.</li>
-                            <li>Role-Based Access Control (RBAC).</li>
-                            <li>Ephemeral Data Processing.</li>
-                        </ul>
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-8">
+                            <div className="flex items-center gap-2 border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-900">
+                                <Server className="h-4 w-4" />
+                                <span>Single-Tenant Architecture</span>
+                            </div>
+                            <div className="flex items-center gap-2 border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-900">
+                                <Users className="h-4 w-4" />
+                                <span>Role-Based Access Control</span>
+                            </div>
+                            <div className="flex items-center gap-2 border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-900">
+                                <Clock className="h-4 w-4" />
+                                <span>Ephemeral Data Processing</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
