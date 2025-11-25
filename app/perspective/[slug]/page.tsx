@@ -35,7 +35,7 @@ export default function ArticlePage() {
     const isBloomberg = article.id === "bloomberg-moment";
 
     return (
-        <main className="min-h-screen bg-[#050A14] text-gray-300 selection:bg-blue-500/30 font-serif-body">
+        <main className="min-h-screen bg-[#050A14] text-gray-300 selection:bg-blue-500/30 font-serif-body overflow-x-hidden">
             {/* Progress Bar */}
             <motion.div
                 className="fixed top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-600 to-blue-400 origin-left z-50"
@@ -44,7 +44,7 @@ export default function ArticlePage() {
 
             <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-[20%_60%_20%] gap-8 relative">
 
-                {/* Left Sidebar: Sticky Metadata */}
+                {/* Left Sidebar: Sticky Metadata (Desktop) */}
                 <aside className="hidden lg:block relative">
                     <div className="sticky top-24 px-6 space-y-8">
                         <Link href="/perspective" className="flex items-center text-sm text-gray-500 hover:text-blue-400 transition-colors group font-sans">
@@ -86,19 +86,49 @@ export default function ArticlePage() {
 
                 {/* Main Content */}
                 <article className="px-6 py-12 lg:py-24 max-w-[720px] mx-auto w-full">
+                    {/* Mobile Header Navigation */}
+                    <div className="lg:hidden mb-8">
+                        <Link href="/perspective" className="flex items-center text-sm text-gray-500 hover:text-blue-400 transition-colors group font-sans mb-6">
+                            <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+                            Back to Perspective
+                        </Link>
+                    </div>
+
                     {/* Header */}
-                    <header className="mb-16 text-center lg:text-left">
-                        <div className="flex items-center justify-center lg:justify-start space-x-3 text-xs font-bold tracking-[0.2em] text-blue-400 uppercase mb-6 font-sans">
+                    <header className="mb-12 lg:mb-16 text-left">
+                        <div className="flex items-center justify-start space-x-3 text-xs font-bold tracking-[0.2em] text-blue-400 uppercase mb-6 font-sans">
                             <span>{article.category}</span>
                             <span className="w-1 h-1 rounded-full bg-blue-500" />
                             <span>Vol. 01</span>
                         </div>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-[1.1] mb-6">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-[1.1] mb-6">
                             {article.title}
                         </h1>
-                        <p className="text-xl md:text-2xl text-gray-400 font-serif italic leading-relaxed">
+                        <p className="text-lg sm:text-xl md:text-2xl text-gray-400 font-serif italic leading-relaxed mb-8">
                             {article.excerpt}
                         </p>
+
+                        {/* Mobile Metadata */}
+                        <div className="lg:hidden flex flex-wrap gap-6 py-6 border-y border-white/10 font-sans">
+                            <div>
+                                <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Published</p>
+                                <p className="text-gray-300 text-sm">{article.date}</p>
+                            </div>
+                            <div>
+                                <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Read Time</p>
+                                <p className="text-gray-300 text-sm">{article.readTime}</p>
+                            </div>
+                            <div className="w-full sm:w-auto">
+                                <p className="text-xs uppercase tracking-wider text-gray-500 mb-2">Author</p>
+                                <div className="flex items-center space-x-2">
+                                    <div className="w-8 h-8 rounded-full bg-gray-800 border border-gray-700" />
+                                    <div>
+                                        <p className="text-gray-300 text-sm font-medium">{article.author.name}</p>
+                                        <p className="text-gray-500 text-xs">{article.author.role}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </header>
 
                     {isBloomberg ? (
@@ -127,7 +157,7 @@ export default function ArticlePage() {
                             </div>
 
                             {/* Article Body */}
-                            <div className="prose prose-invert prose-lg max-w-none">
+                            <div className="prose prose-invert prose-lg max-w-none break-words overflow-hidden">
                                 <p className="font-serif text-xl leading-relaxed text-gray-300 mb-8">
                                     In the 1980s, the bond market was opaque, paper-based, and relationship-driven. If you wanted a price, you called a guy. Then the Bloomberg Terminal arrived.
                                 </p>
@@ -158,7 +188,7 @@ export default function ArticlePage() {
                             </div>
                         </>
                     ) : (
-                        <div className="prose prose-invert prose-lg max-w-none">
+                        <div className="prose prose-invert prose-lg max-w-none break-words overflow-hidden">
                             <p className="font-serif text-xl leading-relaxed text-gray-300 mb-8">
                                 This is a placeholder for the full article content. The actual content for "{article.title}" would go here.
                             </p>
@@ -176,7 +206,7 @@ export default function ArticlePage() {
                 </article>
 
                 {/* Right Sidebar: Table of Contents & Sidenotes Container (Desktop) */}
-                <aside className="hidden lg:block relative">
+                <aside className="hidden lg:block relative w-full">
                     <div className="sticky top-24 px-6">
                         <div className="mb-12">
                             <h4 className="text-xs font-sans font-bold uppercase tracking-widest text-gray-500 mb-4">Contents</h4>
@@ -249,7 +279,7 @@ function Sidenote({ id, content }: { id: string; content: string }) {
             <span className="lg:hidden inline-block align-super text-[10px] text-blue-400 font-bold ml-1 cursor-pointer border border-blue-500/30 rounded-full w-4 h-4 text-center leading-3">
                 {id}
             </span>
-            <span className="hidden lg:block absolute left-[105%] top-0 w-[280px] text-sm text-gray-500 font-sans border-l border-blue-500/30 pl-4 py-1">
+            <span className="hidden lg:block absolute left-full ml-4 top-0 w-48 xl:w-64 text-sm text-gray-500 font-sans border-l border-blue-500/30 pl-4 py-1">
                 <span className="text-blue-400 font-bold mr-2">{id}.</span>
                 {content}
             </span>
