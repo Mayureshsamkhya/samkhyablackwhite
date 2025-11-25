@@ -141,15 +141,15 @@ const VarianceDetector = ({ isActive }: { isActive: boolean }) => {
             <div className="flex h-full">
                 {/* Left Panel - Pitch Deck */}
                 <div className="flex-1 bg-white flex flex-col items-center justify-center p-4 border-r border-gray-100 relative">
-                    <div className="text-xs font- font-mono text-gray-600 mb-2 uppercase">Pitch Deck</div>
-                    <div className="text-xl font- font-bold text-black">EBITDA</div>
+                    <div className="text-xs font-mono text-gray-600 mb-2 uppercase">Pitch Deck</div>
+                    <div className="text-xl font-bold text-black">EBITDA</div>
                     <div className="text-3xl font-bold text-blue-600 mt-1">20%</div>
                 </div>
 
                 {/* Right Panel - MCA Filing */}
                 <div className="flex-1 bg-gray-50 flex flex-col items-center justify-center p-4 relative">
-                    <div className="text-xs font- font-mono text-gray-600 mb-2 uppercase">MCA Filing</div>
-                    <div className="text-xl font- font-bold text-black">EBITDA</div>
+                    <div className="text-xs font-mono text-gray-600 mb-2 uppercase">MCA Filing</div>
+                    <div className="text-xl font-bold text-black">EBITDA</div>
                     <motion.div
                         className="text-3xl font-bold mt-1"
                         animate={{ color: activeState ? "#DC2626" : "#1F2937" }} // Red on hover, Gray default
@@ -222,7 +222,7 @@ const LogicTree = ({ isActive }: { isActive: boolean }) => {
                 {/* Input */}
                 <div className="w-full max-w-[240px] bg-gray-50 rounded-lg p-3 border border-gray-200 flex items-center gap-3 mb-6">
                     <Calculator className="w-4 h-4 text-gray-400" />
-                    <span className="text-sm font- font-medium text-black">Calculate Interest Coverage</span>
+                    <span className="text-sm font-medium text-black">Calculate Interest Coverage</span>
                 </div>
 
                 {/* Formula / Calculation Area */}
@@ -334,8 +334,8 @@ export function FeatureCardsSection() {
 
                 {/* Section Header */}
                 <div className="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 className="text-3xl md:text-5xl font-bold font- text-black mb-6 tracking-tight">
-                        Generic AI Hallucinates. <span className="text-black">Samkhya Verifies.</span>
+                    <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-[1.1] mb-6 text-balance text-[#0A0A0A] dark:text-white">
+                        Generic AI Hallucinates. <span className="text-black dark:text-white">Samkhya Verifies.</span>
                     </h2>
                     <p className="text-gray-600 text-lg leading-relaxed font-">
                         The only intelligence layer built for the distinct needs of modern allocators: <strong className="text-black">Velocity</strong> for Growth VCs, <strong className="text-black">Audit Trails</strong> for CVCs, and <strong className="text-black">Vigilance</strong> for Family Office.

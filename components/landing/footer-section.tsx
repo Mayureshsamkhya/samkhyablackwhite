@@ -14,11 +14,11 @@ export function FooterSection() {
                             <Shield className="h-6 w-6 text-obsidian" />
                         </div>
 
-                        <h2 className="text-3xl md:text-5xl font-bold font- text-black mb-6 tracking-tight">
+                        <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-[1.1] mb-6 text-balance text-[#0A0A0A] dark:text-white">
                             Your Data is Your Edge. <br />We Keep it That Way.
                         </h2>
 
-                        <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font- ">
+                        <p className="text-xl text-[#666666] dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10">
                             We deploy isolated instances for every firm. Your proprietary data and investment memos
                             are never used to train our public models.
                         </p>
@@ -39,14 +39,14 @@ export function FooterSection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-3xl md:text-5xl font-bold font- text-black mb-6 tracking-tight"
+                    className="text-3xl md:text-5xl font-bold tracking-tighter leading-[1.1] mb-6 text-balance text-[#0A0A0A] dark:text-white"
                 >
                     Days of work.
                     <br />
-                    <span className="text-gray-900">Done in Minutes.</span>
+                    <span className="text-[#0A0A0A] dark:text-white">Done in Minutes.</span>
                     {/* <span className="text-gray-600">Yesterday's Data.</span> */}
                 </motion.h2>
-                <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font- ">
+                <p className="text-xl text-[#666666] dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10">
                     Join the design partners building the future of Indian investment intelligence.
                 </p>
                 <motion.div
@@ -55,11 +55,11 @@ export function FooterSection() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="flex flex-col items-center gap-6"
                 >
-                    <button className="group relative inline-flex items-center gap-2 bg-obsidian  px-8 py-4 text-lg font-semibold text-black  transition-transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl">
+                    <button className="group relative inline-flex items-center gap-2 bg-obsidian  px-8 py-4 text-lg font-semibold text-black transition-transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl">
                         <span>Request Access</span>
                         <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                     </button>
-                    <p className="font- text-sm text-gray-600">
+                    <p className="text-sm text-gray-600">
                         Limited availability for Q4 2024.
                     </p>
                 </motion.div>
@@ -67,7 +67,7 @@ export function FooterSection() {
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-200  ">
-                <div className="mx-auto max-w-7xl px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 font- text-xs text-gray-600">
+                <div className="mx-auto max-w-7xl px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-600">
                     <p>© 2025 Samkhya AI Inc.</p>
                     <div className="flex gap-6">
                         <a href="#" className="hover:text-black transition-colors">

@@ -3,8 +3,8 @@ import { FileText, Shield, Check, Zap } from 'lucide-react';
 
 export function SocialProof() {
     return (
-        <section className="py-20 bg-white  border-gray-200">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <section className="w-full bg-white py-12 md:py-24 border-gray-200">
+            <div className="max-w-7xl mx-auto px-4 md:px-6">
 
                 <div className="text-center mb-16">
                     {/* <h2 className="font- text-sm font-semibold tracking-[0.2em] text-gray-600 uppercase">
@@ -20,7 +20,7 @@ export function SocialProof() {
                         {/* Header */}
                         <div className="flex items-start justify-between mb-12">
                             <div>
-                                <h3 className="text-black font- text-lg font-medium tracking-wide">Accenture Ventures</h3>
+                                <h3 className="text-black text-lg font-medium tracking-wide">Accenture Ventures</h3>
                                 <div className="mt-2 flex items-center gap-2">
                                     <div className="w-1.5 h-1.5 rounded-full bg-green-600 animate-pulse"></div>
                                     <span className="text-xs font-bold font-mono text-green-700 uppercase tracking-wide">DEPLOYED</span>
@@ -61,12 +61,12 @@ export function SocialProof() {
 
                         {/* Footer */}
                         <div className="pt-6 border-t border-gray-100 flex justify-between items-end">
-                            <div className="text-xs font- font-bold font-mono text-gray-600 uppercase tracking-wide">
+                            <div className="text-xs font-bold font-mono text-gray-600 uppercase tracking-wide">
                                 Deployment Timeline
                             </div>
                             <div className="text-right">
-                                <div className="text-2xl font- font-mono text-black font-bold">12x</div>
-                                <div className="text-[10px] font- text-gray-600 uppercase tracking-wider font-bold">Faster Execution</div>
+                                <div className="text-2xl font-mono text-black font-bold">12x</div>
+                                <div className="text-[10px] text-gray-600 uppercase tracking-wider font-bold">Faster Execution</div>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ export function SocialProof() {
                         {/* Header */}
                         <div className="flex items-start justify-between mb-8">
                             <div>
-                                <h3 className="text-black font- text-lg font-medium tracking-wide">Upekkha</h3>
+                                <h3 className="text-black text-lg font-medium tracking-wide">Upekkha</h3>
                                 <div className="mt-2 flex items-center gap-2">
                                     <span className="inline-flex items-center px-2 py-0.5 rounded-sm text-xs font-bold font-mono bg-green-100 text-green-800 border border-green-200 uppercase tracking-wide">
                                         IC-READY
@@ -99,8 +99,8 @@ export function SocialProof() {
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="text-sm font- text-black font-mono font-medium">Investment Memo.pdf</div>
-                                    <div className="text-[10px] font- text-green-600 font-mono font-bold uppercase tracking-wide">Verified Source</div>
+                                    <div className="text-sm text-black font-mono font-medium">Investment Memo.pdf</div>
+                                    <div className="text-[10px] text-green-600 font-mono font-bold uppercase tracking-wide">Verified Source</div>
                                 </div>
                             </div>
 
@@ -114,7 +114,7 @@ export function SocialProof() {
                                         <div className="w-4 h-4 flex items-center justify-center rounded-xs bg-green-100 border border-green-200">
                                             <Check className="w-2.5 h-2.5 text-green-700" />
                                         </div>
-                                        <span className="text-xs font- text-gray-600 font-mono font-medium">{item}</span>
+                                        <span className="text-xs text-gray-600 font-mono font-medium">{item}</span>
                                     </div>
                                 ))}
                             </div>
@@ -122,7 +122,7 @@ export function SocialProof() {
 
                         {/* Quote */}
                         <div className="pt-6 border-t border-gray-100">
-                            <p className="text-sm font- text-gray-600 italic leading-relaxed">
+                            <p className="text-sm text-gray-600 italic leading-relaxed">
                                 "Held up against rigorous IC debate. <span className="text-black not-italic font-mono font-medium">Zero hallucinations.</span>"
                             </p>
                         </div>

@@ -50,11 +50,11 @@ export default function WorkflowTabs() {
     if (!activeContent) return null;
 
     return (
-        <section className="w-full bg-white py-12 px-6 transition-colors duration-300">
-            <div className="w-full max-w-6xl mx-auto">
+        <section className="w-full bg-white py-12 md:py-24 px-4 md:px-6 transition-colors duration-300">
+            <div className="w-full max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="mb-12 text-center">
-                    <h2 className="text-3xl md:text-5xl font-bold font- text-black mb-6 tracking-tight">The Intelligence Engine.</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-[1.1] mb-6 text-balance text-[#0A0A0A] dark:text-white">The Intelligence Engine.</h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         The only workflow built for the specific anxieties of India's private market investors.
                     </p>

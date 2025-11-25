@@ -17,10 +17,10 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
-                        className="flex items-center gap-2 mb-4 md:mb-6"
+                        className="flex items-center gap-2 mb-2 md:mb-3"
                     >
                         {/* <span className="h-px w-6 md:w-8 bg-international-orange" /> */}
-                        <span className="font- text-sm md:text-xs font-medium tracking-wider uppercase">
+                        <span className="block text-xs text-[#666666] dark:text-gray-400 mb-2 md:mb-2 uppercase tracking-widest">
                             THE OPERATING SYSTEM FOR INDIAN PRIVATE MARKETS
                         </span>
                         
@@ -43,7 +43,7 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                        className="max-w-xl font- text-base md:text-lg leading-relaxed text-gray-600 mb-6 md:mb-8"
+                        className="text-xl text-[#666666] dark:text-gray-400 max-w-md leading-relaxed mb-10"
                     >
                         The only AI platform that structures <strong>10 years of MCA filings</strong>, charges, and shareholding patterns into audit-ready models in seconds.
                     </motion.p>
@@ -52,9 +52,9 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                        className="flex flex-col items-start gap-3 sm:flex-row sm:gap-4"
+                        className="flex flex-col w-full sm:w-auto items-stretch sm:items-start gap-3 sm:flex-row sm:gap-4"
                     >
-                        <button className="group relative flex items-center gap-2 overflow-hidden bg-obsidian px-6 md:px-8 py-3 md:py-4 font- text-sm font-medium text-white transition-all hover:bg-gray-900 hover:shadow-lg">
+                        <button className="group relative flex items-center justify-center gap-2 overflow-hidden bg-obsidian px-6 md:px-8 py-3 md:py-4 text-sm font-medium text-white transition-all bg-gray-900 hover:shadow-lg">
                             <span className="relative z-10">Request Access</span>
                             <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </button>

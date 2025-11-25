@@ -31,7 +31,7 @@ export default function PerspectivePage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
                         >
-                            <span className="block text-xs font-mono text-[#666666] dark:text-gray-400 mb-6 uppercase tracking-widest">
+                            <span className="block text-xs  text-[#666666] dark:text-gray-400 mb-6 uppercase tracking-widest">
                                 The Manifesto
                             </span>
                             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[1.1] mb-6 text-balance text-[#0A0A0A] dark:text-white">

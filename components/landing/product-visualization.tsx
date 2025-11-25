@@ -11,8 +11,10 @@ export function ProductVisualization() {
                     {/* Text Content */}
                     <div className="w-full lg:w-1/2">
                         <div className="text-base md:text-lg text-gray-700">
-                            <h2 className="text-3xl md:text-5xl font-bold font- text-black mb-6 tracking-tight">Scale your conviction with Verified Intelligence.</h2>
-                            <p>Screen 200+ deals confidently. Samkhya replaces manual workflows with regulatory-verified AI, delivering the speed and audit trails required to convince your Investment Committee.</p>
+                            <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-[1.1] mb-6 text-balance text-[#0A0A0A] dark:text-white">Scale your conviction with Verified Intelligence.</h2>
+                            <p className="text-xl text-[#666666] dark:text-gray-400 max-w-md leading-relaxed mb-10">
+                                Screen 200+ deals confidently. Samkhya replaces manual workflows with regulatory-verified AI, delivering the speed and audit trails required to convince your Investment Committee.
+                            </p>
                         </div>
                     </div>
 

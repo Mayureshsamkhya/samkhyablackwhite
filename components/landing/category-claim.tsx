@@ -39,13 +39,13 @@
 //                     {/* Left Column: Copy & List */}
 //                     <div className="space-y-8">
 //                         <div className="space-y-4">
-//                             <h2 className="text-3xl md:text-4xl lg:text-5xl font- font-bold text-black tracking-tight leading-tight">
+//                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight leading-tight">
 //                                 Generic AI Hallucinates. <br />
 //                                 <span className="text-black drop-shadow-sm">
 //                                     Samkhya Verifies.
 //                                 </span>
 //                             </h2>
-//                             <p className="font- text-gray-600 text-base md:text-lg lg:text-xl max-w-md leading-relaxed">
+//                             <p className="text-gray-600 text-base md:text-lg lg:text-xl max-w-md leading-relaxed">
 //                                 You are making ₹100 Cr decisions. You can't afford "creative"
 //                                 answers.
 //                             </p>
@@ -72,12 +72,12 @@
 //                                         </div>
 //                                         <div>
 //                                             <h3
-//                                                 className={`text-lg font- font-semibold transition-colors ${activeItem === index ? "text-black" : "text-gray-600"
+//                                                 className={`text-lg font-semibold transition-colors ${activeItem === index ? "text-black" : "text-gray-600"
 //                                                     }`}
 //                                             >
 //                                                 {item.title}
 //                                             </h3>
-//                                             <p className="font- text-gray-600 text-sm mt-1">
+//                                             <p className="text-gray-600 text-sm mt-1">
 //                                                 {item.description}
 //                                             </p>
 //                                         </div>
@@ -140,14 +140,14 @@
 //                 className="absolute z-20 w-60 md:w-72 bg-white border border-slate-200 rounded-lg md:rounded-xl p-4 md:p-6 shadow-xl"
 //             >
 //                 <div className="flex justify-between items-start mb-3 md:mb-4">
-//                     <div className="text-[10px] md:text-xs font- font-mono text-gray-600 uppercase tracking-wider">
+//                     <div className="text-[10px] md:text-xs font-mono text-gray-600 uppercase tracking-wider">
 //                         Key Insight
 //                     </div>
 //                     <div className="bg-electric-blue/10 text-electric-blue text-[9px] md:text-[10px] px-1.5 md:px-2 py-0.5 md:py-1 rounded-full border border-electric-blue/20">
 //                         CONFIDENCE: HIGH
 //                     </div>
 //                 </div>
-//                 <div className="font- text-gray-600 text-xs md:text-sm mb-1">Revenue Growth (YoY)</div>
+//                 <div className="text-gray-600 text-xs md:text-sm mb-1">Revenue Growth (YoY)</div>
 //                 <div className="text-3xl md:text-4xl font-bold text-black tracking-tight flex items-center gap-2">
 //                     24.5%
 //                     <div className="relative flex h-3 w-3">
@@ -238,7 +238,7 @@
 //                             transition={{ duration: 0.4 }}
 //                             className="bg-white border border-slate-200 p-3 rounded-lg shadow-sm flex justify-between items-center"
 //                         >
-//                             <span className="text-sm font- text-black font-medium">
+//                             <span className="text-sm text-black font-medium">
 //                                 {event.text}
 //                             </span>
 //                             <span className="text-xs text-slate-400 font-mono">
@@ -346,23 +346,23 @@ export const CategoryClaim = () => {
     ];
 
     return (
-        <section className="relative w-full bg-white py-12 md:py-16 lg:py-24 overflow-hidden border-t border-slate-100">
+        <section className="relative w-full bg-white py-12 md:py-24 overflow-hidden border-t border-slate-100">
             {/* Background Grid */}
             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-multiply"></div>
             <div className="absolute inset-0 bg-grid-slate-100 bg-[length:50px_50px] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10  max-w-7xl ">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center">
                     {/* Left Column: Copy & List */}
                     <div className="space-y-6 md:space-y-8">
                         <div className="space-y-3 md:space-y-4">
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font- font-bold text-black tracking-tight leading-tight">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight leading-tight">
                                 Generic AI Hallucinates. <br />
                                 <span className="text-black drop-shadow-sm">
                                     Samkhya Verifies.
                                 </span>
                             </h2>
-                            <p className="font- text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl max-w-md leading-relaxed">
+                            <p className="text-xl text-[#666666] dark:text-gray-400 max-w-md leading-relaxed mb-10">
                                 You are making ₹100 Cr decisions. You can't afford "creative"
                                 answers.
                             </p>
@@ -392,13 +392,13 @@ export const CategoryClaim = () => {
                                         </div>
                                         <div>
                                             <h3
-                                                className={`text-base sm:text-lg font- font-semibold transition-colors ${
+                                                className={`text-base sm:text-lg font-semibold transition-colors ${
                                                     activeItem === index ? "text-black" : "text-gray-600"
                                                 }`}
                                             >
                                                 {item.title}
                                             </h3>
-                                            <p className="font- text-gray-600 text-xs sm:text-sm mt-1">
+                                            <p className="text-gray-600 text-xs sm:text-sm mt-1">
                                                 {item.description}
                                             </p>
                                         </div>
@@ -464,14 +464,14 @@ const TetherVisual = () => {
                 style={{ willChange: "transform" }}
             >
                 <div className="flex justify-between items-start mb-2 sm:mb-3 md:mb-4">
-                    <div className="text-[9px] sm:text-[10px] md:text-xs font- font-mono text-gray-600 uppercase tracking-wider">
+                    <div className="text-[9px] sm:text-[10px] md:text-xs font-mono text-gray-600 uppercase tracking-wider">
                         Key Insight
                     </div>
                     <div className="bg-electric-blue/10 text-electric-blue text-[8px] sm:text-[9px] md:text-[10px] px-1 sm:px-1.5 md:px-2 py-0.5 md:py-1 rounded-full border border-electric-blue/20">
                         CONFIDENCE: HIGH
                     </div>
                 </div>
-                <div className="font- text-gray-600 text-[10px] sm:text-xs md:text-sm mb-1">Revenue Growth (YoY)</div>
+                <div className="text-gray-600 text-[10px] sm:text-xs md:text-sm mb-1">Revenue Growth (YoY)</div>
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-black tracking-tight flex items-center gap-2">
                     24.5%
                     <div className="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3">
@@ -564,7 +564,7 @@ const NoLagVisual = () => {
                             className="bg-white border border-slate-200 p-2 sm:p-3 rounded-md sm:rounded-lg shadow-sm flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1 sm:gap-0"
                             style={{ willChange: "transform" }}
                         >
-                            <span className="text-xs sm:text-sm font- text-black font-medium">
+                            <span className="text-xs sm:text-sm text-black font-medium">
                                 {event.text}
                             </span>
                             <span className="text-[10px] sm:text-xs text-slate-400 font-mono">
