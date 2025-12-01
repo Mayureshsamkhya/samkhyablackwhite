@@ -18,7 +18,7 @@ export const ARTICLES: Article[] = [
     {
         id: "bloomberg-moment",
         slug: "the-bloomberg-moment-for-private-markets",
-        date: "OCT 24, 2025",
+        date: "NOV 24, 2025",
         category: "THE MANIFESTO",
         title: "The 'Bloomberg Moment' for Private Markets",
         excerpt: "In 1984, transparency transformed the bond market. Today, it’s coming for Indian venture capital.",

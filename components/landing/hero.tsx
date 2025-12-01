@@ -3,10 +3,23 @@
 import { useEffect, useState } from "react";
 import { motion, useAnimation, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, FileText, CheckCircle2, TrendingUp, AlertCircle } from "lucide-react";
+import Link from "next/link";
 
 export function Hero() {
+
+    const onDemoClick = () => {
+    try {
+      if (typeof window !== "undefined") {
+        window.open("https://calendly.com/abhiverma/25min", "_blank")
+      }
+    } catch (e) {
+      console.error("Navigation failed", e)
+    }
+  }
+
+
     return (
-        <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden bg-white  transition-colors duration-300 ">
+        <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden bg-white  transition-colors duration-300 border-b border-gray-200 ">
             {/* Grid Background */}
             <div className="absolute inset-0 z-0 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white,transparent)] " />
 
@@ -20,10 +33,11 @@ export function Hero() {
                         className="flex items-center gap-2 mb-2 md:mb-3"
                     >
                         {/* <span className="h-px w-6 md:w-8 bg-international-orange" /> */}
-                        <span className="block text-xs text-[#666666] dark:text-gray-400 mb-2 md:mb-2 uppercase tracking-widest">
-                            THE OPERATING SYSTEM FOR INDIAN PRIVATE MARKETS
+                        <span className="font-mono text-[10px] md:text-xs font-medium tracking-wider text-international-orange uppercase">
+                            {/* <span className="block text-xs text-[#666666] dark:text-gray-400 mb-2 md:mb-2 uppercase tracking-widest"> */}
+                            THE OPERATING SYSTEM FOR PRIVATE MARKET INVESTORS
                         </span>
-                        
+
                     </motion.div>
 
                     <motion.h1
@@ -35,7 +49,7 @@ export function Hero() {
                     >
                         Invest with Conviction.
                         <br />
-                        <span >Not Just Gut Feel.</span>
+                        <span className="text-slate-500">Not Just Gut Feel.</span>
                         {/* <span className="text-gray-400">Not Just Gut Feel.</span> */}
                     </motion.h1>
 
@@ -45,7 +59,7 @@ export function Hero() {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                         className="text-xl text-[#666666] dark:text-gray-400 max-w-md leading-relaxed mb-10"
                     >
-                        The only AI platform that structures <strong>10 years of MCA filings</strong>, charges, and shareholding patterns into audit-ready models in seconds.
+                        The only AI platform that reconciles conflicting data sources, structures 10 years of financials, and gives you IC-ready analysis. Every number sourced.
                     </motion.p>
 
                     <motion.div
@@ -54,17 +68,24 @@ export function Hero() {
                         transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                         className="flex flex-col w-full sm:w-auto items-stretch sm:items-start gap-3 sm:flex-row sm:gap-4"
                     >
-                        <button className="group relative flex items-center justify-center gap-2 overflow-hidden bg-obsidian px-6 md:px-8 py-3 md:py-4 text-sm font-medium text-white transition-all bg-gray-900 hover:shadow-lg">
-                            <span className="relative z-10">Request Access</span>
+                        <button className="group relative flex items-center justify-center gap-2 overflow-hidden bg-obsidian px-6 md:px-8 py-3 md:py-4 text-md font-medium text-white transition-all bg-gray-900 hover:shadow-lg" onClick={onDemoClick}>
+                            <span className="relative z-10 ">Request Access</span>
                             <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </button>
-                        <a
+                        {/* <a
                             href="#"
                             className="group relative flex items-center justify-center px-6 py-3 md:py-4 font- text-sm font-medium border border-gray-300 shadow-md text-gray-600 transition-colors hover:text-obsidian"
                         >
                             <span>See the Case Study</span>
                             <span className="absolute bottom-2 md:bottom-3 left-6 h-px w-[calc(100%-3rem)] scale-x-0 bg-obsidian transition-transform duration-300 group-hover:scale-x-100" />
-                        </a>
+                        </a> */}
+                        <Link
+                            href="/case-study"
+                            className="group relative flex items-center justify-center px-6 py-3 md:py-4 font-sans text-md font-medium text-gray-600 transition-colors hover:text-obsidian"
+                        >
+                            <span>See the Case Study</span>
+                            <span className="absolute bottom-2 md:bottom-3 left-6 h-px w-[calc(100%-3rem)] scale-x-0 bg-obsidian transition-transform duration-300 group-hover:scale-x-100" />
+                        </Link>
                     </motion.div>
                 </div>
 
@@ -83,7 +104,7 @@ function FinancialXRay() {
             initial={{ opacity: 0, rotateX: 10, rotateY: -10, scale: 0.9 }}
             animate={{ opacity: 1, rotateX: 5, rotateY: -5, scale: 1 }}
             transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-            className="relative w-full max-w-xl aspect-[3/4] sm:aspect-[4/5] md:aspect-square lg:aspect-[6/5] rounded-lg md:rounded-xl bg-white shadow-2xl border border-gray-200 overflow-hidden"
+            className="relative w-full max-w-xl aspect-[3/4] sm:aspect-[4/5] md:aspect-square lg:aspect-[6/5] rounded-lg md:rounded-xl bg-white shadow-xl border border-gray-200 overflow-hidden"
             style={{ transformStyle: "preserve-3d" }}
         >
             {/* Layer A: The Chaos (Background) */}

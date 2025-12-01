@@ -3,14 +3,15 @@ import { FileText, Shield, Check, Zap } from 'lucide-react';
 
 export function SocialProof() {
     return (
-        <section className="w-full bg-white py-12 md:py-24 border-gray-200">
+        <section className="w-full bg-white py-12 md:py-24 border-gray-200 border border-b">
             <div className="max-w-7xl mx-auto px-4 md:px-6">
 
                 <div className="text-center mb-16">
                     {/* <h2 className="font- text-sm font-semibold tracking-[0.2em] text-gray-600 uppercase">
                         Trusted by Forward-Thinking Capital Allocators
                     </h2> */}
-                    <h2  className="text-3xl md:text-5xl font-bold font- text-black mb-6 tracking-tight">Trusted by Forward-Thinking Capital Allocators</h2>
+                    <h2  className="text-3xl md:text-5xl font-bold font- text-black mb-6 tracking-tight">Trusted by High-Conviction Capital</h2>
+                    <p className='text-lg text-gray-600 max-w-2xl mx-auto'>Deployed by the funds defining the next decade of Indian venture.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -76,7 +77,7 @@ export function SocialProof() {
                         {/* Header */}
                         <div className="flex items-start justify-between mb-8">
                             <div>
-                                <h3 className="text-black text-lg font-medium tracking-wide">Upekkha</h3>
+                                <h3 className="text-black text-lg font-medium tracking-wide">Upekkha Funds</h3>
                                 <div className="mt-2 flex items-center gap-2">
                                     <span className="inline-flex items-center px-2 py-0.5 rounded-sm text-xs font-bold font-mono bg-green-100 text-green-800 border border-green-200 uppercase tracking-wide">
                                         IC-READY
@@ -108,7 +109,8 @@ export function SocialProof() {
                             <div className="space-y-3">
                                 {[
                                     "Source Documents Tethers (Active)",
-                                    "Financial Logic (Verified)"
+                                    "Financial Statements (Verified)",
+                                    "Unit Economics (Validated)"
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-3">
                                         <div className="w-4 h-4 flex items-center justify-center rounded-xs bg-green-100 border border-green-200">

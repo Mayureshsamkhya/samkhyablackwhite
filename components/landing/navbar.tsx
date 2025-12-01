@@ -40,7 +40,7 @@ export function Navbar() {
                         SAMKHYA.AI
                     </Link> */}
                     <Link href="/" className="flex items-center gap-2 group">
-                        <div className="relative w-12 h-12 rounded-xl overflow-hidden ring-2 ring-primary/10 group-hover:ring-primary/30 transition-all">
+                        <div className="relative w-12 h-12 rounded-xl overflow-hidden transition-all">
                             <Image
                                 src="/samkhya_logo.png"
                                 alt="Samkhya Logo"
@@ -61,14 +61,14 @@ export function Navbar() {
                 <div className="hidden md:flex gap-6 md:gap-8">
                     <Link
                         href="/#product"
-                        className={`text-sm md:text-base font-medium font-sans transition-all duration-300 relative group ${isActive("/#product")
-                            ? "text-blue-600 dark:text-blue-400 font-semibold"
+                        className={`text-xs md:text-sm font-medium font-sans transition-all duration-300 relative group ${isActive("/#product")
+                            ? "text-gray-900 dark:text-blue-400 font-semibold"
                             : "text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400"
                             }`}
                     >
                         Product
                         <span
-                            className={`absolute -bottom-1 left-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 ${isActive("/#product")
+                            className={`absolute -bottom-1 left-0 h-0.5 bg-gray-900 dark:bg-blue-400 transition-all duration-300 ${isActive("/#product")
                                 ? "w-full"
                                 : "w-0 group-hover:w-full"
                                 }`}
@@ -76,14 +76,14 @@ export function Navbar() {
                     </Link>
                     <Link
                         href="/perspective"
-                        className={`text-sm md:text-base font-medium font-sans transition-all duration-300 relative group ${isActive("/perspective")
-                            ? "text-blue-600 dark:text-blue-400 font-semibold"
+                        className={`text-xs md:text-sm font-medium font-sans transition-all duration-300 relative group ${isActive("/perspective")
+                            ? "text-gray-900 dark:text-blue-400 font-semibold"
                             : "text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400"
                             }`}
                     >
                         Perspectives
                         <span
-                            className={`absolute -bottom-1 left-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 ${isActive("/perspective")
+                            className={`absolute -bottom-1 left-0 h-0.5 bg-gray-900 dark:bg-blue-400 transition-all duration-300 ${isActive("/perspective")
                                 ? "w-full"
                                 : "w-0 group-hover:w-full"
                                 }`}

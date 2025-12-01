@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FileText, AlertTriangle, Calculator, CheckCircle2, ArrowRight,Shield, Zap, Filter, } from 'lucide-react';
+import { FileText, AlertTriangle, Calculator, CheckCircle2, ArrowRight, Shield, Zap, Filter, } from 'lucide-react';
 
 // --- Shared Styles ---
 const cardBaseClass = "relative w-full h-full bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-500";
@@ -329,16 +329,21 @@ export function FeatureCardsSection() {
     ];
 
     return (
-        <section className="pt-18 pb-10">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <section className="relative pt-18 pb-10 border-b border-gray-200">
+            {/* Background Grid */}
+            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-multiply pointer-events-none"></div>
+            <div className="absolute inset-0 bg-grid-slate-100 bg-[length:50px_50px] [mask-image:linear-gradient(to_bottom,white,transparent)] pointer-events-none"></div>
+            <div className="relative max-w-7xl mx-auto px-6 lg:px-8 z-10">
 
                 {/* Section Header */}
                 <div className="text-center mb-16 max-w-3xl mx-auto">
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-[1.1] mb-6 text-balance text-[#0A0A0A] dark:text-white">
-                        Generic AI Hallucinates. <span className="text-black dark:text-white">Samkhya Verifies.</span>
+                        {/* Generic AI Hallucinates. <span className="text-black dark:text-white">Samkhya Verifies.</span> */}
+                        Why Generalist Models <span className="text-slate-500"> Fail in Private Markets</span>
+
                     </h2>
                     <p className="text-gray-600 text-lg leading-relaxed font-">
-                        The only intelligence layer built for the distinct needs of modern allocators: <strong className="text-black">Velocity</strong> for Growth VCs, <strong className="text-black">Audit Trails</strong> for CVCs, and <strong className="text-black">Vigilance</strong> for Family Office.
+                        The only intelligence layer built for the distinct needs of modern allocators: <strong className="text-black">Audit Trails</strong> for Growth VCs, <strong className="text-black"> Velocity</strong> for CVCs, and <strong className="text-black">Vigilance</strong> for Family Office.
                     </p>
                 </div>
 

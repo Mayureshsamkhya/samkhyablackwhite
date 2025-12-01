@@ -153,7 +153,7 @@ export const VerificationAudit_Light = () => {
     ];
 
     return (
-        <section className="w-full py-1  text-black overflow-hidden relative">
+        <section className="w-full  text-black overflow-hidden relative">
             {/* Background Grid */}
             <div className="absolute inset-0 bg-[url('/grid-black.svg')] opacity-[0.03] pointer-events-none" />
 

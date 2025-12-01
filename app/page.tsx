@@ -2,12 +2,13 @@ import Image from "next/image";
 import { Hero } from "@/components/landing/hero";
 import { SocialProof } from "@/components/landing/social-proof";
 import { FeatureCardsSection } from "@/components/landing/feature-cards";
-import { ProductVisualization } from "@/components/landing/product-visualization";
-import { CategoryClaim } from "@/components/landing/category-claim";
-import { VerificationAudit_Light } from "@/components/landing/verification-audit-light";
+// import { ProductVisualization } from "@/components/landing/product-visualization";
+// import { CategoryClaim } from "@/components/landing/category-claim";
+// import { VerificationAudit_Light } from "@/components/landing/verification-audit-light";
 import WorkflowTabs from "@/components/landing/workflow-tabs";
 import { FooterSection } from "@/components/landing/footer-section";
 import { Navbar } from "@/components/landing/navbar";
+import { IntelligenceVerification } from "@/components/landing/IntelligenceStack";
 
 
 export default function Home() {
@@ -74,12 +75,14 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       {/* <Navbar /> */}
       <Hero />
+      {/* <hr className="text-gray-100"/> */}
       <SocialProof />
        <WorkflowTabs />
       <FeatureCardsSection />
-      <ProductVisualization />
+      {/* <ProductVisualization /> */}
+      <IntelligenceVerification />
       {/* <CategoryClaim /> */}
-      <VerificationAudit_Light />
+      {/* <VerificationAudit_Light /> */}
       {/* <WorkflowTabs /> */}
       <FooterSection />
     </main>

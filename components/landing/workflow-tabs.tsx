@@ -23,7 +23,7 @@ const tabs: TabContent[] = [
         id: "growth-vc",
         label: "Growth Investors",
         headline: "Automate the Drudgery.",
-        description: "Upload PDF → Get 3-Statement Model.",
+        description: "From Government Filings to 3-Statement Model",
         component: <GrowthInvestorsTab />,
     },
     {
@@ -50,13 +50,13 @@ export default function WorkflowTabs() {
     if (!activeContent) return null;
 
     return (
-        <section className="w-full bg-white py-12 md:scroll-py-14 px-4 md:px-6 transition-colors duration-300">
+        <section className="w-full bg-white py-12 md:scroll-py-14 px-4 md:px-6 transition-colors duration-300 border border-b border-gray-200">
             <div className="w-full max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="mb-12 text-center">
-                    <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-[1.1] mb-6 text-balance text-[#0A0A0A] dark:text-white">The Intelligence Engine.</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-[1.1] mb-6 text-balance text-[#0A0A0A] dark:text-white">The Intelligence Engine</h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        The only workflow built for the specific anxieties of India's private market investors.
+                        The only workflow built for the specific anxieties of private market investors.
                     </p>
                 </div>
 
@@ -66,7 +66,7 @@ export default function WorkflowTabs() {
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
-                            className={`pb-4 text-lg font-medium transition-all duration-300 relative ${activeTab === tab.id
+                            className={`pb-2 text-lg font-medium transition-all duration-300 relative ${activeTab === tab.id
                                 ? "text-black"
                                 : "text-gray-600 hover:text-black"
                                 }`}
