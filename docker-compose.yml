@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: samkhya-ui-nextjs
+    restart: unless-stopped
+    ports:
+      - "3000:3000"  # Expose on the same port as old React app
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    networks:
+      - samkhya-network
+
+networks:
+  samkhya-network:
+    driver: bridge
