@@ -4,18 +4,19 @@ import { useEffect, useState } from "react";
 import { motion, useAnimation, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, FileText, CheckCircle2, TrendingUp, AlertCircle } from "lucide-react";
 import Link from "next/link";
+import { ContactDialog } from "./contact-dialog";
 
 export function Hero() {
 
-    const onDemoClick = () => {
-    try {
-      if (typeof window !== "undefined") {
-        window.open("https://calendly.com/abhiverma/25min", "_blank")
-      }
-    } catch (e) {
-      console.error("Navigation failed", e)
-    }
-  }
+    // const onDemoClick = () => {
+    // try {
+    //   if (typeof window !== "undefined") {
+    //     window.open("https://calendly.com/abhiverma/25min", "_blank")
+    //   }
+    // } catch (e) {
+    //   console.error("Navigation failed", e)
+    // }
+  // }
 
 
     return (
@@ -30,7 +31,7 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
-                        className="flex items-center gap-2 mb-2 md:mb-3"
+                        className="flex items-center gap-2 mb-2 md:mb-3 mt-4"
                     >
                         {/* <span className="h-px w-6 md:w-8 bg-international-orange" /> */}
                         <span className="font-mono text-[10px] md:text-xs font-medium tracking-wider text-international-orange uppercase">
@@ -68,10 +69,11 @@ export function Hero() {
                         transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                         className="flex flex-col w-full sm:w-auto items-stretch sm:items-start gap-3 sm:flex-row sm:gap-4"
                     >
-                        <button className="group relative flex items-center justify-center gap-2 overflow-hidden bg-obsidian px-6 md:px-8 py-3 md:py-4 text-md font-medium text-white transition-all bg-gray-900 hover:shadow-lg" onClick={onDemoClick}>
+                        {/* <button className="group relative flex items-center justify-center gap-2 overflow-hidden bg-obsidian px-6 md:px-8 py-3 md:py-4 text-md font-medium text-white transition-all bg-gray-900 hover:shadow-lg" onClick={onDemoClick}>
                             <span className="relative z-10 ">Request Access</span>
                             <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                        </button>
+                        </button> */}
+                        <ContactDialog />
                         {/* <a
                             href="#"
                             className="group relative flex items-center justify-center px-6 py-3 md:py-4 font- text-sm font-medium border border-gray-300 shadow-md text-gray-600 transition-colors hover:text-obsidian"
@@ -87,24 +89,30 @@ export function Hero() {
                             <span className="absolute bottom-2 md:bottom-3 left-6 h-px w-[calc(100%-3rem)] scale-x-0 bg-obsidian transition-transform duration-300 group-hover:scale-x-100" />
                         </Link>
                     </motion.div>
+
+                    {/* Mobile financial X-ray */}
+                    <div className="relative flex items-center justify-center perspective-1000 lg:hidden mt-8">
+                        <FinancialXRay isMobile={true} />
+                    </div>
                 </div>
 
                 {/* Right Side: The Visualization (X-Ray Engine) */}
-                <div className="relative flex items-center justify-center perspective-1000">
-                    <FinancialXRay />
+                <div className="relative hidden items-center justify-center perspective-1000 lg:flex">
+                    <FinancialXRay isMobile={false} />
                 </div>
             </div>
         </section>
     );
 }
 
-function FinancialXRay() {
+function FinancialXRay({ isMobile }: { isMobile: boolean }) {
     return (
         <motion.div
             initial={{ opacity: 0, rotateX: 10, rotateY: -10, scale: 0.9 }}
             animate={{ opacity: 1, rotateX: 5, rotateY: -5, scale: 1 }}
             transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-            className="relative w-full max-w-xl aspect-[3/4] sm:aspect-[4/5] md:aspect-square lg:aspect-[6/5] rounded-lg md:rounded-xl bg-white shadow-xl border border-gray-200 overflow-hidden"
+            className={`relative w-full max-w-xl rounded-lg md:rounded-xl bg-white shadow-xl border border-gray-200 overflow-hidden ${isMobile ? "aspect-square" : "aspect-[4/5] sm:aspect-[4/5] md:aspect-square lg:aspect-[6/5]"
+                }`}
             style={{ transformStyle: "preserve-3d" }}
         >
             {/* Layer A: The Chaos (Background) */}

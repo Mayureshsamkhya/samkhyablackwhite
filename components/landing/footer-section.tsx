@@ -2,18 +2,9 @@
 
 import { motion } from "framer-motion";
 import { Shield, ArrowRight, Server, Users, Clock, ShieldCheck } from "lucide-react";
+import { ContactDialog } from "./contact-dialog";
 
 export function FooterSection() {
-
-    const onDemoClick = () => {
-        try {
-            if (typeof window !== "undefined") {
-                window.open("https://calendly.com/abhiverma/25min", "_blank")
-            }
-        } catch (e) {
-            console.error("Navigation failed", e)
-        }
-    }
     return (
         <footer className="w-full md:mt-10  text-obsidian  transition-colors duration-300  border-gray-200 ">
             {/* Security Section */}
@@ -72,10 +63,7 @@ export function FooterSection() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="flex flex-col items-center gap-6"
                 >
-                    <button className="group relative flex items-center justify-center gap-2 overflow-hidden bg-obsidian px-6 md:px-8 py-3 md:py-4 text-sm font-medium text-white transition-all bg-gray-900 hover:shadow-lg" onClick={onDemoClick}>
-                        <span className="relative z-10">Request Access</span>
-                        <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </button>
+                    <ContactDialog />
                     <p className="text-sm text-gray-600">
                         Limited availability for Q4 2025.
                     </p>
