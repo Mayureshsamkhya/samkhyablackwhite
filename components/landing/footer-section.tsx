@@ -54,7 +54,7 @@ export function FooterSection() {
                     <span className="text-slate-900">Done in Minutes.</span>
                     {/* <span className="text-gray-600">Yesterday's Data.</span> */}
                 </motion.h2>
-                <p className="text-xl text-[#666666] dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10">
+                <p className="text-xl text-[#666666] dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-8">
                     Join the design partners building the future of Indian investment intelligence.
                 </p>
                 <motion.div
@@ -64,9 +64,9 @@ export function FooterSection() {
                     className="flex flex-col items-center gap-6"
                 >
                     <ContactDialog />
-                    <p className="text-sm text-gray-600">
+                    {/* <p className="text-sm text-gray-600">
                         Limited availability for Q4 2025.
-                    </p>
+                    </p> */}
                 </motion.div>
             </div>
 

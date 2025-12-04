@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
+import { Logo } from "../logo";
 
 export function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,28 +33,7 @@ export function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
                 {/* Logo */}
                 <div className="text-sm font-bold tracking-tight">
-                    {/* <Link
-                        href="/"
-                        className={`text-sm md:text-base font-medium font-sans transition-colors`}
-                    >
-                        SAMKHYA.AI
-                    </Link> */}
-                    <Link href="/" className="flex items-center gap-2 group">
-                        <div className="relative w-12 h-12 rounded-xl overflow-hidden transition-all">
-                            <Image
-                                src="/samkhya_logo.png"
-                                alt="Samkhya Logo"
-                                // fill
-                                className="object-contain"
-                                height={60}
-                                width={60}
-                            />
-                        </div>
-                        <span className="text-xl font-bold  bg-clip-text text-primary hidden sm:block">
-                            {/* <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hidden sm:block"> */}
-                            samkhya.ai
-                        </span>
-                    </Link>
+                    <Logo />
                 </div>
 
                 {/* Desktop Navigation */}

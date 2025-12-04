@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   title: "Samkhya | AI Due Diligence for Private Market Investors",
   description: "Investment intelligence with verified data for Growth VCs and CVCs. No black boxes. Every data point traced to source. Decisions you can defend at IC.",
   // subtext: "AI Due Diligence for Private Market Investors",
+  icons: {
+    icon: "/samkhya_dark_64.png",
+  },
 };
 
 export default function RootLayout({

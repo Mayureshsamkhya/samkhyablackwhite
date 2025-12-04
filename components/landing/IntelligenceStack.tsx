@@ -88,7 +88,7 @@ export const IntelligenceVerification = () => {
                 title: "Financial Risk Detected",
                 status: "warning" as const,
                 icon: <AlertTriangle className="w-4 h-4" />,
-                position: "-top-24 left-0 md:-left-4 md:-top-32",
+                position: "-top-0 left-0 md:-left-100 md:-top-32",
                 dataPoints: [
                     {
                         label: "open_charges",
@@ -111,7 +111,7 @@ export const IntelligenceVerification = () => {
                 title: "Governance Conflict",
                 status: "critical" as const,
                 icon: <ShieldAlert className="w-4 h-4" />,
-                position: "top-12 -right-4 md:-right-12",
+                position: "-top-10 -right-100 md:-right-140",
                 dataPoints: [
                     {
                         label: "director_network",
@@ -134,7 +134,7 @@ export const IntelligenceVerification = () => {
                 title: "Verified Financials",
                 status: "success" as const,
                 icon: <CheckCircle2 className="w-4 h-4" />,
-                position: "bottom-0 left-4 md:left-12 translate-y-full pt-4",
+                position: "-bottom-6 left-4 md:left-6 translate-y-full pt-4",
                 dataPoints: [
                     {
                         label: "financials_fy24",
@@ -224,7 +224,7 @@ export const IntelligenceVerification = () => {
                     </h2>
                 </div>
 
-                <div className="relative max-w-3xl mx-auto mt-16" ref={containerRef}>
+                <div className="relative max-w-4xl mx-auto mt-16" ref={containerRef}>
                     {/* Paper/Document Container */}
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
