@@ -3,6 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - MONGODB_URI=${MONGODB_URI}
     container_name: samkhya-ui-nextjs
     restart: unless-stopped
     ports:

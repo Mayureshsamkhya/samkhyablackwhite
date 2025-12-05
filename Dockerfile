@@ -18,6 +18,10 @@ COPY . .
 # Set build-time environment variables
 ENV NEXT_TELEMETRY_DISABLED 1
 
+# Pass build-time arguments
+ARG MONGODB_URI
+ENV MONGODB_URI=$MONGODB_URI
+
 # Build the application
 RUN npm run build
 
