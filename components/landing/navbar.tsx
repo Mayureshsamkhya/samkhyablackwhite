@@ -97,7 +97,7 @@ export function Navbar() {
             {isMobileMenuOpen && (
                 <div className="md:hidden border-t border-[#E5E5E5] dark:border-gray-800 bg-white dark:bg-[#050A14]">
                     <div className="px-4 py-4 space-y-3">
-                        <Link
+                        {/* <Link
                             href="/#product"
                             onClick={() => setIsMobileMenuOpen(false)}
                             className={`block text-base font-medium font-sans transition-colors py-2 border-l-4 pl-3 ${isActive("/#product")
@@ -106,7 +106,7 @@ export function Navbar() {
                                 }`}
                         >
                             Product
-                        </Link>
+                        </Link> */}
                         <Link
                             href="/perspective"
                             onClick={() => setIsMobileMenuOpen(false)}
