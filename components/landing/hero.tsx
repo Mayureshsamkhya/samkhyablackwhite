@@ -48,9 +48,11 @@ export function Hero() {
                         // className="font- text-4xl font-medium leading-[1.1] tracking-tight text-obsidian sm:text-5xl md:text-6xl mb-4 md:mb-6 font-text-4xl"
                         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[1.1] mb-6 text-balance text-[#0A0A0A] dark:text-white"
                     >
-                        Invest with Conviction.
+                        {/* Invest with Conviction.
                         <br />
-                        <span className="text-slate-500">Not Just Gut Feel.</span>
+                        <span className="text-slate-500">Not Just Gut Feel.</span> */}
+
+                        The financial truth for India’s private markets
                         {/* <span className="text-gray-400">Not Just Gut Feel.</span> */}
                     </motion.h1>
 
@@ -60,7 +62,8 @@ export function Hero() {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                         className="text-xl text-[#666666] dark:text-gray-400 max-w-md leading-relaxed mb-10"
                     >
-                        The only AI platform that reconciles conflicting data sources, structures 10 years of financials, and gives you IC-ready analysis. Every number sourced.
+                        {/* The only AI platform that reconciles conflicting data sources, structures 10 years of financials, and gives you IC-ready analysis. Every number sourced. */}
+                        Samkhya ingests India’s regulatory filings, the numbers companies must report, not just the ones they choose to share and transforms them with AI to surface signals often missed. Conviction, not hope.
                     </motion.p>
 
                     <motion.div

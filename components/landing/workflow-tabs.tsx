@@ -28,7 +28,7 @@ const tabs: TabContent[] = [
     },
     {
         id: "cvc",
-        label: "CVC",
+        label: "Corporate Venture Funds",
         headline: "Quantify Strategic Fit.",
         description: "Map startups to your business units.",
         component: <CvcTab />,

@@ -38,7 +38,7 @@ export function Navbar() {
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex gap-6 md:gap-8">
-                    <Link
+                    {/* <Link
                         href="/#product"
                         className={`text-xs md:text-sm font-medium font-sans transition-all duration-300 relative group ${isActive("/#product")
                             ? "text-gray-900 dark:text-blue-400 font-semibold"
@@ -52,7 +52,7 @@ export function Navbar() {
                                 : "w-0 group-hover:w-full"
                                 }`}
                         />
-                    </Link>
+                    </Link> */}
                     <Link
                         href="/perspective"
                         className={`text-xs md:text-sm font-medium font-sans transition-all duration-300 relative group ${isActive("/perspective")
